@@ -32,7 +32,7 @@ Output:
 */
 
 export function multiplyBySeven(num) {
-    
+
     return num * 7;
 }
 
@@ -50,7 +50,8 @@ Output:
 */
 
 export function multiplyBy12ThenHalve(num) {
-    return true;
+    const multiplyBytwelve = num *12;
+    return multiplyBytwelve/2;
 }
 
 // This function should take in three numbers, divide the first by the second, then multiply the result by the third
@@ -66,7 +67,7 @@ Output:
 */
 
 export function divideThenMultiply(firstNumber, secondNumber, thirdNumber) {
-    return true;
+    return firstNumber/ secondNumber * thirdNumber;
 }
 
 // This function should take in three numbers and return those numbers in an array
@@ -82,7 +83,8 @@ Output:
 */
 
 export function returnAsAnArray(firstNumber, secondNumber, thirdNumber) {
-    return true;
+    const myArray = [firstNumber, secondNumber, thirdNumber];
+    return myArray;
 }
 
 // This function should take in three numbers and return those numbers mushed together as a string
@@ -98,7 +100,7 @@ Output:
 */
 
 export function returnAsAString(firstNumber, secondNumber, thirdNumber) {
-    return true;
+    return `${firstNumber}, ${secondNumber}, ${thirdNumber}`;
 }
 
 // This function should take in two numbers and return a greeting announcing that the sum of those numbers is today's lucky number

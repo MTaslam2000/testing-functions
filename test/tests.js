@@ -1,5 +1,11 @@
 // IMPORT MODULES under test here:
-import { myFunction, addExclamationPoints, multiplyBySeven, multiplyBy12ThenHalve, divideThenMultiply } from '../functions.js';
+import { myFunction, 
+    addExclamationPoints, 
+    multiplyBySeven, 
+    multiplyBy12ThenHalve, 
+    divideThenMultiply, 
+    returnAsAnArray,
+    returnAsAString } from '../functions.js';
 
 const { test, skip } = QUnit;
 
@@ -24,7 +30,7 @@ test('This function should take in a number and multiply it by seven', (expect) 
 
     const actual = multiplyBySeven(4);
 
-    expect.deepEqual(actual, expected, '4 * 7 should be 28');
+    expect.deepEqual(actual, expected, '4 * 7 = 28');
 });
 
 test('This function should take in a number and multiply it by twelve then cut the result in half', (expect) => {
@@ -32,7 +38,7 @@ test('This function should take in a number and multiply it by twelve then cut t
 
     const actual = multiplyBy12ThenHalve(4);
 
-    expect.deepEqual(actual, expected, '(4 * 12)/2');
+    expect.deepEqual(actual, expected, '(4 * 12)/2 = 24');
 });
 
 test('This function should take in three numbers, divide the first by the second, then multiply the result by the third', (expect) => {
@@ -40,5 +46,22 @@ test('This function should take in three numbers, divide the first by the second
 
     const actual = divideThenMultiply(8, 4, 5);
 
-    expect.deepEqual(actual, expected, '(8/4)5' );
+    expect.deepEqual(actual, expected, '(8/4)5 = 10');
 });
+
+test('This function should take in three numbers and return those numbers in an array', (expect) => {
+    const expected = [8, 4, 5];
+
+    const actual = returnAsAnArray(8, 4, 5);
+
+    expect.deepEqual(actual, expected, '8,4,5 should be [8, 4, 5]');
+});
+
+test('This function should take in three numbers and return those numbers mushed together as a string', (expect) => {
+    const expected = '8, 4, 5';
+
+    const actual = returnAsAString(8, 4, 5);
+
+    expect.deepEqual(actual, expected, '8,4,5 should be "845"');
+});
+
