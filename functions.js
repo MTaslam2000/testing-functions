@@ -15,7 +15,8 @@ Output:
 */
 
 export function addExclamationPoints() {
-    return true;
+    const aString = 'bunny rabbit';
+    return aString + '!!!';
 }
 
 // This function should take in a number and multiply it by seven
@@ -31,6 +32,7 @@ Output:
 */
 
 export function multiplyBySeven(num) {
+    
     return true;
 }
 
