@@ -7,7 +7,8 @@ import { myFunction,
     returnAsAnArray,
     returnAsAString,
     makeLuckyGreeting,
-    getSecondItem } from '../functions.js';
+    getSecondItem,
+    getLastItem } from '../functions.js';
 
 const { test, skip } = QUnit;
 
@@ -81,4 +82,12 @@ test('This function should take an array and return the second item in the array
     const actual = getSecondItem(['kiwi', 'apple', 'orange', 'plum']);
 
     expect.deepEqual(actual, expected, 'should be apple');
+});
+
+test('This function should take an array and return the LAST item in the array, no matter the arrays length', (expect) => {
+    const expected = 'plum';
+
+    const actual = getLastItem(['kiwi', 'apple', 'orange', 'plum']);
+
+    expect.deepEqual(actual, expected, 'should be plum');
 });
