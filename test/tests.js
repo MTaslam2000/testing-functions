@@ -5,7 +5,9 @@ import { myFunction,
     multiplyBy12ThenHalve, 
     divideThenMultiply, 
     returnAsAnArray,
-    returnAsAString } from '../functions.js';
+    returnAsAString,
+    makeLuckyGreeting,
+    getSecondItem } from '../functions.js';
 
 const { test, skip } = QUnit;
 
@@ -65,3 +67,18 @@ test('This function should take in three numbers and return those numbers mushed
     expect.deepEqual(actual, expected, '8,4,5 should be "845"');
 });
 
+test('This function should take in two numbers and return a greeting announcing that the sum of those numbers is todays lucky number', (expect) => {
+    const expected = 'Hello! Your lucky number for the day is 12.';
+
+    const actual = makeLuckyGreeting(8, 4);
+
+    expect.deepEqual(actual, expected, '8, 4 should be Hello! Your lucky number for the day is 12');
+});
+
+test('This function should take an array and return the second item in the array', (expect) => {
+    const expected = 'apple';
+
+    const actual = getSecondItem(['kiwi', 'apple', 'orange', 'plum']);
+
+    expect.deepEqual(actual, expected, 'should be apple');
+});
