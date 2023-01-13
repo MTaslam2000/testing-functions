@@ -8,7 +8,9 @@ import { myFunction,
     returnAsAString,
     makeLuckyGreeting,
     getSecondItem,
-    getLastItem } from '../functions.js';
+    getLastItem,
+    renderDogLI,
+    renderDogDiv } from '../functions.js';
 
 const { test, skip } = QUnit;
 
@@ -91,3 +93,20 @@ test('This function should take an array and return the LAST item in the array, 
 
     expect.deepEqual(actual, expected, 'should be plum');
 });
+
+test('This function should take a dog object and return an <li> with the name of the dog', (expect) => {
+    const expected = '<li>Benny</li>';
+
+    const actual = renderDogLI({ name: 'Benny', age: 6 });
+
+    expect.deepEqual(actual.outerHTML, expected, 'should be name of dog');
+});
+
+test('This function should take a dog object and return a div with the dogs information', (expect) => {
+    const expected = '<div><h1>Benny</h1><p>Benny is 6 years old</p></div>';
+
+    const actual = renderDogDiv({name: 'Benny', age: 6});
+
+    expect.deepEqual(actual.outerHTML, expected, 'should be information of dog');
+});
+

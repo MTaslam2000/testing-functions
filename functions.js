@@ -50,8 +50,8 @@ Output:
 */
 
 export function multiplyBy12ThenHalve(num) {
-    const multiplyBytwelve = num *12;
-    return multiplyBytwelve/2;
+    const multiplyByTwelve = num * 12;
+    return multiplyByTwelve / 2;
 }
 
 // This function should take in three numbers, divide the first by the second, then multiply the result by the third
@@ -67,7 +67,7 @@ Output:
 */
 
 export function divideThenMultiply(firstNumber, secondNumber, thirdNumber) {
-    return firstNumber/ secondNumber * thirdNumber;
+    return firstNumber / secondNumber * thirdNumber;
 }
 
 // This function should take in three numbers and return those numbers in an array
@@ -166,7 +166,9 @@ Output:
 */
 
 export function renderDogLI(dog) {
-    return true;
+    const newElement = document.createElement('li');
+    newElement.textContent = dog.name;
+    return newElement;
 }
 
 // This function should take a dog object and return a div with the dog's information
@@ -181,6 +183,8 @@ Output:
 
 */
 
-export function renderDogDiv() {
-    return true;
+export function renderDogDiv(dog) {
+    const newElement = document.createElement('div');
+    newElement.textContent = dog.age;
+    return newElement;
 }
