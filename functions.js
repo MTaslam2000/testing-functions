@@ -184,7 +184,11 @@ Output:
 */
 
 export function renderDogDiv(dog) {
-    const newElement = document.createElement('div');
-    newElement.textContent = dog.age;
-    return newElement;
+    const newElementDiv = document.createElement('div');
+    const newElementP = document.createElement('p');
+    const newElementH1 = document.createElement('h1');
+    newElementP.textContent = `${dog.name} is ${dog.age} years old`;
+    newElementH1.textContent = dog.name;
+    newElementDiv.append(newElementH1, newElementP);
+    return newElementDiv;
 }
