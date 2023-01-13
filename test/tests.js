@@ -28,6 +28,18 @@ test('this test should add exclamation points', (expect) => {
     const actual = addExclamationPoints('bunny rabbit');
 
     expect.equal(actual, expected, 'bunny rabbit = bunny rabbit!!!');
+
+
+});
+
+test('this test should add exclamation points', (expect2) => {
+    const expected2 = 'rawr!!!';
+
+    const actual2 = addExclamationPoints('rawr');
+
+    expect2.equal(actual2, expected2, 'rawr = rawr!!!');
+
+    
 });
 
 test('This function should take in a number and multiply it by seven', (expect) => {
@@ -105,7 +117,7 @@ test('This function should take a dog object and return an <li> with the name of
 test('This function should take a dog object and return a div with the dogs information', (expect) => {
     const expected = '<div><h1>Benny</h1><p>Benny is 6 years old</p></div>';
 
-    const actual = renderDogDiv({name: 'Benny', age: 6});
+    const actual = renderDogDiv({ name: 'Benny', age: 6 });
 
     expect.deepEqual(actual.outerHTML, expected, 'should be information of dog');
 });
