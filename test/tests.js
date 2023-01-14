@@ -149,7 +149,7 @@ test('This function should take in three numbers and return those numbers in an 
 });
 
 test('This function should take in three numbers and return those numbers mushed together as a string', (expect) => {
-    const expected = '8, 4, 5';
+    const expected = '845';
 
     const actual = returnAsAString(8, 4, 5);
 
@@ -157,7 +157,7 @@ test('This function should take in three numbers and return those numbers mushed
 });
 
 test('This function should take in three numbers and return those numbers mushed together as a string', (expect2) => {
-    const expected2 = '6, 7, 8';
+    const expected2 = '678';
 
     const actual2 = returnAsAString(6, 7, 8);
 
@@ -165,7 +165,7 @@ test('This function should take in three numbers and return those numbers mushed
 });
 
 test('This function should take in three numbers and return those numbers mushed together as a string', (expect3) => {
-    const expected3 = '3, 0, 1';
+    const expected3 = '301';
 
     const actual3 = returnAsAString(3, 0, 1);
 
